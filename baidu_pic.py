@@ -85,15 +85,15 @@ def download_picture_batch(save_dir, param_dict):
     return 0
 
 
-def download_picture_baidu(batch_number, rn):
-    for i in range(1, batch_number+1):
+def download_picture_baidu(keyword, batch_number, rn):
+    for i in range(1, batch_number + 1):
         download_picture_batch("./pics/", {
             'tn': 'resultjson_com',
             'ipn': 'rj',
             'ct': '201326592',
             'is': '',
             'fp': 'result',
-            'queryWord': '半身像',
+            'queryWord': keyword,
             'cl': '2',
             'lm': '-1',
             'ie': 'utf-8',
@@ -102,7 +102,7 @@ def download_picture_baidu(batch_number, rn):
             'st': '-1',
             'z': '',
             'ic': '0',
-            'word': '半身像',
+            'word': keyword,
             's': '',
             'se': '',
             'tab': '',
@@ -122,4 +122,4 @@ def download_picture_baidu(batch_number, rn):
         })
 
 
-download_picture_baidu(100, 30)
+download_picture_baidu("半身像", 100, 30)
